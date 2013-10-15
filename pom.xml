@@ -1,13 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.asus.editor.backend</groupId>
-  <artifactId>JadexWebService</artifactId>
-  <packaging>war</packaging>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>JadexWebService Maven Webapp</name>
-  <url>http://maven.apache.org</url>
-  <properties>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+   <modelVersion>4.0.0</modelVersion>
+   <groupId>com.asus.editor.backend</groupId>
+   <artifactId>JadexWebService</artifactId>
+   <packaging>war</packaging>
+   <version>0.0.1-SNAPSHOT</version>
+   <name>JadexWebService Maven Webapp</name>
+   <url>http://maven.apache.org</url>
+   <properties>
       <!-- Specify desired Jadex version here. -->
       <jadex.version>2.3</jadex.version>
       <jersey.version>2.3.1</jersey.version>
@@ -33,14 +33,14 @@
          <layout>default</layout>
       </repository>
    </repositories>
-  <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-     <dependency>
+   <dependencies>
+      <dependency>
+         <groupId>junit</groupId>
+         <artifactId>junit</artifactId>
+         <version>3.8.1</version>
+         <scope>test</scope>
+      </dependency>
+      <dependency>
          <groupId>net.sourceforge.jadex</groupId>
          <artifactId>jadex-distribution-standard</artifactId>
          <!-- <artifactId>jadex-distribution-minimal</artifactId> -->
@@ -101,20 +101,24 @@
          <scope>provided</scope>
       </dependency>
       <dependency>
-      <groupId>asm</groupId>
-      <artifactId>asm</artifactId>
-      <version>3.3.1
-          </version>
+         <groupId>org.apache.tomcat</groupId>
+         <artifactId>tomcat-catalina</artifactId>
+         <version>7.0.27</version>
       </dependency>
       <dependency>
-	<groupId>com.sun.jersey</groupId>
-	<artifactId>jersey-bundle</artifactId>
-	<version>1.14</version>
-</dependency>
-  </dependencies>
-  <build>
-    <finalName>JadexService</finalName>
-     <resources>
+         <groupId>asm</groupId>
+         <artifactId>asm</artifactId>
+         <version>3.3.1</version>
+      </dependency>
+      <dependency>
+         <groupId>com.sun.jersey</groupId>
+         <artifactId>jersey-bundle</artifactId>
+         <version>1.14</version>
+      </dependency>
+   </dependencies>
+   <build>
+      <finalName>JadexService</finalName>
+      <resources>
          <!-- Allow ADF files (.xml, .bpmn, ...) be placed in source folder -->
          <resource>
             <directory>src/main/java</directory>
@@ -125,5 +129,5 @@
             </excludes>
          </resource>
       </resources>
-  </build>
+   </build>
 </project>

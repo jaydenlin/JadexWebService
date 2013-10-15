@@ -19,8 +19,7 @@ public class HelloWorldPlan extends Plan
 		System.out.println("\n"+getBeliefbase().getBelief("msg").getFact());
 		waitFor(2000);
 		System.out.println("\nSee you. Bye! ");
-
-		killAgent();
+        killAgent();
 	}
 }
 
